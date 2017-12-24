@@ -1,6 +1,61 @@
-
-
-$primary-color: #ff0000
+$font-stack:    Helvetica, sans-serif
 
 body
-  color: $primary-color
+  font: 100% $font-stack
+
+
+=border-radius($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius:    $radius
+  -ms-border-radius:     $radius
+  border-radius:         $radius
+
+=box-shadow($shadow)
+  -webkit-box-shadow: $shadow
+  -moz-box-shadow: $shadow
+  -ms-box-shadow: $shadow
+  box-shadow: $shadow
+
+
+
+
+.message
+  padding: 10px
+  margin: 10px 5px
+  width: auto
+  float: left
+  display: inline-block
+  +border-radius(5px)
+  +box-shadow(1px 1px 5px #888888)
+
+
+.success
+  @extend .message
+  color: #3c763d
+  background-color: #dff0d8
+  border-color: #d6e9c6
+
+.info
+  @extend .message
+  color: #31708f
+  background-color: #d9edf7
+  border-color: #bce8f1
+
+.warning
+  @extend .message
+  color: #8a6d3b
+  background-color: #fcf8e3
+  border-color: #faebcc
+
+.error
+  @extend .message
+  color: #a94442
+  background-color: #f2dede
+  border-color: #ebccd1
+
+
+
+
+
+h1
+  font-size: 30px
