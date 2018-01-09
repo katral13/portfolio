@@ -1,7 +1,368 @@
-$font-stack:    Helvetica, sans-serif
+
+$font-stack:  'Open Sans', sans-serif
 
 body
-  font: 100% $font-stack
+  font: 12px $font-stack
+  margin: 0px
+  height: 100%
+
+html
+  height: 100%
+
+
+
+
+html, body, address, blockquote, div, dl, form, h1, h2, h3, h4, h5, h6, ol, p, pre, table, ul,
+dd, dt, li, tbody, td, tfoot, th, thead, tr, button, del, ins, map, object,
+a, abbr, acronym, b, bdo, big, br, cite, code, dfn, em, i, img, kbd, q, samp, small, span,
+strong, sub, sup, tt, var, legend, fieldset
+	margin: 0
+	padding: 0
+
+
+img, fieldset
+	border: 0
+
+
+/* set image max width to 100% */
+img
+	max-width: 100%
+	height: auto
+	width: auto\9
+
+
+/* set html5 elements to block */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+    display: block
+
+
+
+/************STRUCTURE**************/
+.wrapper
+  margin: 0px
+  padding: 0px
+
+
+p, li
+  font-size: 14px
+
+h1
+  font-weight: 300
+  margin: 0px auto
+  padding: 50px 0px
+  text-align: center
+
+.clear-both
+   clear: both
+
+.content-box
+  margin: 0
+  padding-bottom: 80px
+  position: relative
+  z-index: 2
+
+.content-box aside
+  width: 20%
+  float: left
+  text-align: right
+  padding-top: 10px
+
+.content-box .rhs
+  width: 75%
+  float: right
+  padding-top: 4px
+  padding-bottom: 40px
+
+aside span
+  background-color: #00ff00
+  padding: 3px 15px
+  font-size: 1em
+  font-weight: bold
+  border-radius: 10px
+
+
+
+
+
+
+/************VARIABLES**************/
+$primary-color-1: #16193b
+$primary-color-2: #35468c
+$primary-color-3: #38ff14
+$primary-color-4: #7fb1f0
+$primary-color-5: #add5f7
+$primary-color-6: #8cff8c
+$primary-color-7: #ffffff
+
+
+
+
+
+
+.home-content
+  background-color: $primary-color-1
+  padding: 0px
+  height: 100vh
+
+
+.home-content .intro-text
+  position: absolute
+  height: 100%
+  width: 100%
+  display: table
+  z-index: 3
+
+.home-content .intro-text h1
+  display: table-cell
+  vertical-align: middle
+  color: $primary-color-4
+  text-align: center
+  font-size: 5em
+  padding: 0px
+
+
+.home-content .intro-text h1 span
+    font-size: 0.2em !important
+    font-weight: 300
+    text-transform: uppercase
+    color: $primary-color-5
+    letter-spacing: 3px
+    position: relative
+    top: -62px
+
+
+.about-content
+  background-color: $primary-color-5
+  min-height: 600px
+
+.about-content h1
+  color: $primary-color-1
+  font-size: 8em
+
+.about-content p
+  color: $primary-color-1
+  line-height: 30px
+
+
+.about-content .lhs
+  width: 50%
+  padding: 30px 30px 30px 60px
+  float: left
+
+.about-content .rhs
+  width: 30%
+  padding: 40px
+  float: left
+
+.about-content .rhs .pic
+  position: relative
+  margin: 50px 0px 0px 26px
+
+
+.about-content .rhs .pic .triangle-up2
+  width: 350px
+  height: 350px
+  background: #92c2ea url("/images/vish.png") center center no-repeat
+  background-size: contain
+  transition: 0.4s cubic-bezier(1, -1, 0, 2)
+  clip-path: polygon(50% 5%, 0% 100%, 100% 100%)
+  border-bottom: 10px solid #7ed5a7
+
+
+.about-content .rhs .triangle-up2 p
+  padding-top: 140px
+  left: 0px
+  bottom: 0px
+  position: relative
+
+
+
+
+.skills-content
+  background-color: $primary-color-1
+  padding-bottom: 80px
+
+.skills-content h1
+  font-size: 8em
+  color: $primary-color-3
+
+.skills-content .col-3
+  width: 20%
+  display: inline-block
+  padding: 0px 40px 60px 40px
+  text-align: left
+  color: $primary-color-5
+
+.skills-content h2
+  padding: 10px 0px
+  font-weight: 600
+
+.skills-content p
+  line-height: 30px
+
+.skills-content .col-12
+  width: 100%
+  margin: 0 auto
+  display: flex
+
+
+.skills-content .col-12 .col-5
+  width: 30%
+  display: block
+  padding: 10px 0px
+  margin: 0 auto
+  float: left
+
+
+
+.experience-content
+  background-color: $primary-color-2
+
+.experience-content h1
+  font-size: 8em
+  color: $primary-color-3
+
+.experience-content h2
+  font-size: 2em
+  font-weight: 600
+  color: $primary-color-4
+
+
+.experience-content h3
+  color: $primary-color-3
+  font-size: 1.6em
+  font-weight: lighter
+  text-transform: uppercase
+  letter-spacing: 5px
+  margin: 5px 0px
+
+.content-box2 .rhs ul
+  margin-left: 10px
+  padding-right: 40px
+  width: 40%
+  float: left
+
+
+.experience-content li
+  color: $primary-color-5
+  line-height: 30px
+  list-style-type: disc
+  margin-left: 15px
+
+.education-content
+  background-color: $primary-color-6
+  padding: 50px 0px 150px 0px
+  text-align: center
+
+.education-content h1
+  font-size: 8em
+
+.clients-content
+  background-color: $primary-color-7
+  min-height: 600px
+
+footer
+  background-color: $primary-color-1
+  text-align: center
+  color: #add5f7
+  margin: 0px
+  padding: 100px 0px
+
+footer h3
+  font-weight: 600
+  font-size: 2em
+  margin-bottom: 10px
+
+
+footer a:link
+  color: #add5f7
+  text-decoration: none
+  font-weight: lighter
+
+
+
+
+
+.triangle-down
+  width: 0px
+  height: 0
+  border-left: 650px solid rgba(127, 177, 240, .4)
+  border-right: 400px solid transparent
+  border-top: 1750px solid transparent
+  position: absolute
+  z-index: 0
+
+.triangle-up
+  width: 0px
+  height: 0
+  border-right: 600px solid rgba(0, 255, 0, .2)
+  border-left: 300px solid transparent
+  border-bottom: 1250px solid transparent
+  position: absolute
+  z-index: 0
+  right: 0px
+
+
+
+
+
+
+
+.video-container
+  position: absolute
+  top: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  overflow: hidden
+
+.video-container video, img
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%
+  min-height: 100%
+
+  /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  width: auto
+  height: auto
+
+  /* Center the video */
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+  opacity: 0.3
+
+
+.progress
+  background-color: $primary-color-2
+  border: 0
+  height: 18px
+  border-radius: 9px
+
+progress::-webkit-progress-value
+    background: $primary-color-3
+
+
+#progressbar
+  width: 300px
+  background-color: $primary-color-3
+
+
+.progress-value
+  padding: 0px 5px
+  position: relative
+  top: -20px
+  line-height: 20px
+  font-size: .8em
+  color: $primary-color-4
+  height: 18px
+  right: 30px
+    /* float: right; */
+
+.progress-bar-wrapper label
+  color: $primary-color-4
+  display: flex
+
 
 
 =border-radius($radius)
@@ -15,9 +376,6 @@ body
   -moz-box-shadow: $shadow
   -ms-box-shadow: $shadow
   box-shadow: $shadow
-
-
-
 
 .message
   padding: 10px
@@ -52,10 +410,3 @@ body
   color: #a94442
   background-color: #f2dede
   border-color: #ebccd1
-
-
-
-
-
-h1
-  font-size: 30px
