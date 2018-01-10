@@ -12,13 +12,34 @@
 // === Responsive Grid-View ===
 .col-1 {width: 8.33%;}
 .col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
+.col-3 {
+  width: 25%;
+  @include medium-devices {
+    width: 100%;
+  }
+}
+.col-4 {
+  width: 33.33%;
+  @include medium-devices {
+    width: 100%;
+  }
+}
 .col-5 {width: 41.66%;}
 .col-6 {width: 50%;}
 .col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
+.col-8 {
+  width: 66.66%;
+  @include medium-devices {
+    width: 100%;
+    padding:10px !important;
+  }
+}
+.col-9 {
+  width: 75%;
+  @include medium-devices {
+    width: 100%;
+  }
+}
 .col-10 {width: 83.33%;}
 .col-11 {width: 91.66%;}
 .col-12 {width: 100%;}
@@ -38,7 +59,16 @@
 
 // === common classes ===
 body{font: 12px $primary-font-1;}
-h1 {font-size: 9em; text-align: $text-center; padding-bottom: 40px; font-family: $primary-font-1; font-weight: lighter;}
+h1 {
+  font-size: 9em;
+  text-align: $text-center;
+  padding-bottom: 40px;
+  font-family: $primary-font-1;
+  font-weight: lighter;
+  @include medium-devices {
+    font-size: 4em;
+    }
+}
 h2 {font-size: 2em; }
 h3 {font-size: 1.3em; padding-bottom: 10px;}
 h4 {font-size: 1em;}
@@ -111,34 +141,37 @@ p {font-size: $text-m; line-height: 28px;}
   opacity: 0.3;
 }
 
-
-
-
-
 // === about content  ===
-.about-content {background-color: $primary-color-5; padding: 130px 0px;}
-.about-content .col-8 {padding: 30px 100px; text-align: $text-left; }
-.about-content h1 {color: $primary-color-1; padding-bottom: 10px; text-align: $text-left;}
-.about-content p {color: $primary-color-1;}
-.about-content h2 {color: $primary-color-4;}
+.about-content {background-color: $primary-color-5; padding: 80px 0px; color: $primary-color-1; text-align: $text-left;}
+.about-content .col-8 {padding: 30px 100px;}
+.about-content h1 {padding-bottom: 10px; text-align: $text-left;}
+
 .triangle-up2 {
-  width: 350px;
-  height: 346px;
+  width: 333px;
+  height: 333px;
   background: #92c2ea url('/images/vish.png') center center no-repeat;
   background-size: contain;
   transition: 0.4s cubic-bezier(1, -1, 0, 2);
   clip-path: polygon(50% 5%, 0% 100%, 100% 100%);
   border-bottom: 10px solid #7ed5a7;
+  margin:0 auto;
 }
 
 
 // === skills content  ===
 .skills-content {background-color: $primary-color-1; padding: 80px 0px;}
-.skills-content .row:nth-child(3) {padding: 50px 0px;}
-.skills-content .col-3 {padding: 40px;}
 .skills-content h1 {color: $primary-color-3;}
-.skills-content h2 {color: $primary-color-5;}
-.skills-content p {color: $primary-color-7;}
+
+@media (min-width: 960px){
+  .flex-container-1, .flex-container-2 {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.flex-container-1 div, .flex-container-2 div {padding:20px;}
+.flex-container-1 div h2 {color: $primary-color-5;}
+.flex-container-1 div p {color: $primary-color-7;}
 
 .progress {
   background-color: $primary-color-2;
@@ -153,7 +186,6 @@ progress::-webkit-progress-value {
 
 #progressbar {
   background-color: $primary-color-3;
-  width: 300px;
 }
 
 .progress-value {

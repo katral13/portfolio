@@ -1,0 +1,13 @@
+
+// Medium devices (tablets, 768px and below)
+@mixin medium-devices {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin rounded {
+  border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+}
