@@ -1,0 +1,221 @@
+@import "variables";
+@import "mixins";
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700');
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700');
+
+
+
+// === The CSS box-sizing property allows us to include the padding and border in an element's total width and height. ===
+* {box-sizing: border-box;}
+
+// === Responsive Grid-View ===
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+// === All these columns should be floating to the left, and have a padding of 15px ===
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+// === The columns inside a row are all floating to the left, and are therefore taken out of the flow of the page, and other elements will be placed as if the columns do not exist. To prevent this, we will add a style that clears the flow ===
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+// === common classes ===
+body{font: 12px $primary-font-1;}
+h1 {font-size: 9em; text-align: $text-center; padding-bottom: 40px; font-family: $primary-font-1; font-weight: lighter;}
+h2 {font-size: 2em; }
+h3 {font-size: 1.3em; padding-bottom: 10px;}
+h4 {font-size: 1em;}
+h5 {font-size: 0.5em;}
+h6 {font-size: 0.1em;}
+ul li {
+  font-size: $text-m;
+  line-height: 28px;
+  list-style-type: circle;
+  margin-left: 16px;
+}
+p {font-size: $text-m; line-height: 28px;}
+
+// === home content ===
+.home-content{
+  background-color: $primary-color-1;
+  height: 100vh;
+  padding: 0px;
+}
+
+.home-content .intro-text {
+  display: table;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+}
+
+.home-content .intro-text h1 {
+  color: $primary-color-4;
+  display: table-cell;
+  font-size: 4em;
+  padding: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.home-content .intro-text h1 span {
+  color: $primary-color-5;
+  font-family: $primary-font-1;
+  font-size: 0.26em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  position: relative;
+  text-transform: uppercase;
+  top: -44px;
+}
+
+// === home intro video ===
+.video-container {
+  bottom: 0;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.video-container video, img {
+  min-width: 100%;   /* Make video to at least 100% wide and tall */
+  min-height: 100%;
+  width: auto; /* Setting width & height to auto prevents the browser from stretching or squishing the video */
+  height: auto;
+
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity: 0.3;
+}
+
+
+
+
+
+// === about content  ===
+.about-content {background-color: $primary-color-5; padding: 130px 0px;}
+.about-content .col-8 {padding: 30px 100px; text-align: $text-left; }
+.about-content h1 {color: $primary-color-1; padding-bottom: 10px; text-align: $text-left;}
+.about-content p {color: $primary-color-1;}
+.about-content h2 {color: $primary-color-4;}
+.triangle-up2 {
+  width: 350px;
+  height: 346px;
+  background: #92c2ea url('/images/vish.png') center center no-repeat;
+  background-size: contain;
+  transition: 0.4s cubic-bezier(1, -1, 0, 2);
+  clip-path: polygon(50% 5%, 0% 100%, 100% 100%);
+  border-bottom: 10px solid #7ed5a7;
+}
+
+
+// === skills content  ===
+.skills-content {background-color: $primary-color-1; padding: 80px 0px;}
+.skills-content .row:nth-child(3) {padding: 50px 0px;}
+.skills-content .col-3 {padding: 40px;}
+.skills-content h1 {color: $primary-color-3;}
+.skills-content h2 {color: $primary-color-5;}
+.skills-content p {color: $primary-color-7;}
+
+.progress {
+  background-color: $primary-color-2;
+  border: 0;
+  border-radius: 9px;
+  height: 18px;
+}
+
+progress::-webkit-progress-value {
+  background: $primary-color-3;
+}
+
+#progressbar {
+  background-color: $primary-color-3;
+  width: 300px;
+}
+
+.progress-value {
+  color: $primary-color-4;
+  font-size: .8em;
+  height: 18px;
+  line-height: 20px;
+  padding: 0px 5px;
+  position: relative;
+  right: 30px;
+  top: -20px;
+}
+
+.progress-bar-wrapper label {
+  color: $primary-color-4;
+  display: flex;
+}
+
+
+// === experience content  ===
+.experience-content {background-color: $primary-color-2; padding: 80px 0px;}
+.experience-content h1 {color: $primary-color-3;}
+.experience-content h2 {color: $primary-color-4;}
+.experience-content h3 {color: $primary-color-3; letter-spacing: 2px; text-transform: uppercase;}
+.experience-content .col-3 {text-align: $text-center; padding-top:24px;}
+.experience-content .col-3 span{
+  @include rounded;
+  background-color: $primary-color-3;
+  font-size: $text-xs;
+  font-weight: bold;
+  padding: 3px 10px;
+}
+.experience-content li{color: $primary-color-7;}
+
+
+// === education content  ===
+.education-content {
+  background-color: $primary-color-6;
+  text-align: $text-center;
+  padding: 80px 0px;
+}
+
+.education-content h1 {
+  color: $primary-color-1;
+  padding: 0px 0px 50px 0px;
+}
+.education-content p {
+  color: $primary-color-1;
+}
+
+
+// === footer content  ===
+footer {
+  background-color: $primary-color-1;
+  text-align: center;
+  padding: 100px 0px;
+}
+
+footer h3 {
+  color: $primary-color-4;
+  padding: 10px 0px;
+}
+footer a {
+    color: $primary-color-4;
+}
