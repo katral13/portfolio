@@ -24,8 +24,18 @@
     width: 100%;
   }
 }
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
+.col-5 {
+  width: 41.66%;
+  @include medium-devices {
+    width: 100%;
+  }
+}
+.col-6 {
+  width: 50%;
+  @include medium-devices {
+    width: 100%;
+  }
+}
 .col-7 {width: 58.33%;}
 .col-8 {
   width: 66.66%;
@@ -161,6 +171,44 @@ p {font-size: $text-m; line-height: 28px;}
 // === skills content  ===
 .skills-content {background-color: $primary-color-1; padding: 80px 0px;}
 .skills-content h1 {color: $primary-color-3;}
+.skills-content .row{padding:5px 0px;}
+.skills-content .flex-container-1 {padding-bottom: 60px;}
+.skillbar {
+  position:relative;
+  display:block;
+  margin: 0px auto 15px auto;
+  width: 50%;
+  @include medium-devices {
+    width: 80%;
+    }
+  background-color: $primary-color-2;
+  height:6px;
+}
+
+.skillbar-title {
+  position:absolute;
+  top: -20px;
+  left: 0px;
+  font-size:12px;
+  color: $primary-color-4;
+}
+
+.skillbar-bar {
+  height:6px;
+  width:0px;
+  background-color: $primary-color-3;
+}
+
+.skill-bar-percent {
+  position:absolute;
+  top: -20px;
+  right: 0px;
+  font-size:11px;
+  color: $primary-color-4;
+}
+
+
+
 
 @media (min-width: 960px){
   .flex-container-1, .flex-container-2 {
@@ -170,39 +218,8 @@ p {font-size: $text-m; line-height: 28px;}
 }
 
 .flex-container-1 div, .flex-container-2 div {padding:20px;}
-.flex-container-1 div h2 {color: $primary-color-5;}
-.flex-container-1 div p {color: $primary-color-7;}
-
-.progress {
-  background-color: $primary-color-2;
-  border: 0;
-  border-radius: 9px;
-  height: 18px;
-}
-
-progress::-webkit-progress-value {
-  background: $primary-color-3;
-}
-
-#progressbar {
-  background-color: $primary-color-3;
-}
-
-.progress-value {
-  color: $primary-color-4;
-  font-size: .8em;
-  height: 18px;
-  line-height: 20px;
-  padding: 0px 5px;
-  position: relative;
-  right: 30px;
-  top: -20px;
-}
-
-.progress-bar-wrapper label {
-  color: $primary-color-4;
-  display: flex;
-}
+.flex-container-1 div h2 {color: $primary-color-4;}
+.flex-container-1 div p {color: $primary-color-5;}
 
 
 // === experience content  ===
@@ -218,7 +235,7 @@ progress::-webkit-progress-value {
   font-weight: bold;
   padding: 3px 10px;
 }
-.experience-content li{color: $primary-color-7;}
+.experience-content li{color: $primary-color-5;}
 
 
 // === education content  ===
