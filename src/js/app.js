@@ -7,7 +7,6 @@ jQuery('.skillbar').each(function(){
     width:jQuery(this).attr('data-percent')
   },3000);
 });
-});
 
 $('.skill-bar-percent').each(function () {
     $(this).prop('Counter',0).animate({
@@ -19,4 +18,5 @@ $('.skill-bar-percent').each(function () {
             $(this).text(Math.ceil(now));
         }
     });
+});
 });
