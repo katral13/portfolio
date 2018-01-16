@@ -21,18 +21,22 @@
 
 
 </head>
-<body class="theme-default">
+<body class="theme-default" id="switchTheme">
   <!-- main wrapper starts here -->
   <div class="wrapper">
     <!-- home intro content starts here -->
     <section class="home-content">
           <div class="video-container">
               <div class="intro-text">
+                <label class="switch switchbtn">
+                  <input type="checkbox" onclick="myFunction()">
+                  <span class="slider round"></span>
+                </label>
                 <h1>Vishal Katral <br/> <span>UI / UX Designer</span></h1>
               </div>
               <!-- <img src="images/hero1.jpg"> -->
              <video autoplay loop>
-                <source src="../videos/c1.mp4" type="video/mp4">
+                <source src="../src/videos/c1.mp4" type="video/mp4">
               </video>
           </div>
     </section>
@@ -69,7 +73,7 @@
               <h2>Sketches</h2>
               <p>Delivered high quality design docs: sketches, sitemap, user flows, wireframes, mockups, specification.</p>
             </div>
-            <div class="box-4">
+            <div class="box-4" id="myP">
               <h2>Code</h2>
               <p>Write front-end HTML5 code in text editor to implement the user interface designs for new products.</p>
             </div>
@@ -101,10 +105,10 @@
             </div>
           </div>
           <div class="col-6">
-            <div class="skillbar clearfix " data-percent="60%">
-              <div class="skillbar-title"><span>Bootstrap</span></div>
+            <div class="skillbar clearfix " data-percent="50%">
+              <div class="skillbar-title"><span>SASS</span></div>
               <div class="skillbar-bar"></div>
-              <div class="skill-bar-percent">60%</div>
+              <div class="skill-bar-percent">50%</div>
             </div>
           </div>
         </div>
@@ -249,6 +253,24 @@
 
 
 
+<script>
+function myFunction() {
+  var element = document.getElementById("switchTheme");
+
+  if (element.classList) {
+      element.classList.toggle("theme-red");
+  } else {
+      var classes = element.className.split(" ");
+      var i = classes.indexOf("theme-red");
+
+      if (i >= 0)
+          classes.splice(i, 1);
+      else
+          classes.push("theme-red");
+          element.className = classes.join(" ");
+  }
+}
+</script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="main.js"></script>
