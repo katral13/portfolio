@@ -3,8 +3,9 @@
 @import "mixins";
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700');
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700');
-
-
+@import "theme-default.scss";
+@import "theme-brown.scss";
+@import "theme-red.scss";
 
 // === The CSS box-sizing property allows us to include the padding and border in an element's total width and height. ===
 * {box-sizing: border-box;}
@@ -94,7 +95,6 @@ p {font-size: $text-m; line-height: 28px;}
 
 // === home content ===
 .home-content{
-  background-color: $primary-color-1;
   height: 100vh;
   padding: 0px;
 }
