@@ -7,12 +7,9 @@ module.exports = {
     module: {
         rules: [
           {
-              test: /\.scss$/,
-              loaders: ['style-loader', 'css-loader', 'sass-loader']
-          },
-          {
               test: /\.(png|jp(e*)g|svg)$/,
               loader: 'url-loader',
+              exclude: [ /node_modules/],
               options: { 
                   limit: 8000, // Convert images < 8kb to base64 strings
                   name: 'images/[hash]-[name].[ext]'
@@ -20,6 +17,7 @@ module.exports = {
           },
           {
             test: /\.scss$/,
+            exclude: [ /node_modules/],
             use: ExtractTextPlugin.extract({
               fallback: "style-loader",
               use: ['css-loader', 'sass-loader']
