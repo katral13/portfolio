@@ -1,3 +1,38 @@
-.home-content{
-  background-color: $primary-color-1;
-}
+
+
+// === home intro content  ===
+.home-content{background-color: $primary-color-1;}
+.home-content .intro-text h1 {color: $primary-color-4;}
+.home-content .intro-text h1 span {color: $primary-color-5; font-family: $primary-font-1;}
+
+// === about content  ===
+.about-content {background-color: $primary-color-5;  color: $primary-color-1;}
+.triangle-up2 {background-color: $primary-color-9;border-color: $primary-color-8;}
+
+// === skills content  ===
+.skills-content {background-color: $primary-color-1;}
+.skills-content h1 {color: $primary-color-3;}
+.skillbar {background-color: $primary-color-2;}
+.skillbar-title {color: $primary-color-4;}
+.skillbar-bar {background-color: $primary-color-3;}
+.skill-bar-percent {color: $primary-color-4;}
+.flex-container-1 div h2 {color: $primary-color-4;}
+.flex-container-1 div p {color: $primary-color-5;}
+
+// === experience content  ===
+.experience-content {background-color: $primary-color-2;}
+.experience-content h1 {color: $primary-color-3;}
+.experience-content h2 {color: $primary-color-4;}
+.experience-content h3 {color: $primary-color-3;}
+.experience-content .col-3 span{background-color: $primary-color-3;}
+.experience-content li{color: $primary-color-5;}
+
+// === education content  ===
+.education-content {background-color: $primary-color-6;}
+.education-content h1 {color: $primary-color-1;}
+.education-content p {color: $primary-color-1;}
+
+// === footer content  ===
+footer {background-color: $primary-color-1;}
+footer h3 {color: $primary-color-4;}
+footer a {color: $primary-color-4;}
