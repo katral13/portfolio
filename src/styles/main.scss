@@ -99,7 +99,7 @@ p {font-size: $text-m; line-height: 28px;}
   padding: 0px;
 }
 .home-content .switchbtn {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
   color: #000;
@@ -141,11 +141,11 @@ p {font-size: $text-m; line-height: 28px;}
 }
 
 input:checked + .slider {
-  background-color: #c9283e;
+  background-color: #000;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #c9283e;
+  box-shadow: 0 0 1px #000;
 }
 
 input:checked + .slider:before {
@@ -209,7 +209,7 @@ input:checked + .slider:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  opacity: 0.3;
+  opacity: 0.2;
 }
 
 // === about content  ===

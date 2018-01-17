@@ -36,7 +36,7 @@
               </div>
               <!-- <img src="images/hero1.jpg"> -->
              <video autoplay loop>
-                <source src="../src/videos/c1.mp4" type="video/mp4">
+                <source src="https://s3-eu-west-1.amazonaws.com/video.gallereplay.com/artistarea/A%20waterfall%20in%20Canadian%20woodlands_e9c2b2f6-94f2-4ceb-8d38-e088bf3400c4/Cinemagraph_plain/576x324/cinemagraph.mp4" type="video/mp4">
               </video>
           </div>
     </section>
@@ -258,15 +258,15 @@ function myFunction() {
   var element = document.getElementById("switchTheme");
 
   if (element.classList) {
-      element.classList.toggle("theme-red");
+      element.classList.toggle("theme-brown");
   } else {
       var classes = element.className.split(" ");
-      var i = classes.indexOf("theme-red");
+      var i = classes.indexOf("theme-brown");
 
       if (i >= 0)
           classes.splice(i, 1);
       else
-          classes.push("theme-red");
+          classes.push("theme-brown");
           element.className = classes.join(" ");
   }
 }
