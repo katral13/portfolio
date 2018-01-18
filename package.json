@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack --colors",
+    "copy": "rm -rf ../vishalkatral.github.io/* & cp -R dist/* ../vishalkatral.github.io/"
   },
   "repository": {
     "type": "git",
